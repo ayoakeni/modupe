@@ -351,6 +351,10 @@ nav ul li a:hover {
   margin-bottom: 20px;
 }
 
+.contact-section .text-name {
+  margin-bottom: 20px;
+}
+
 .contact-section .text-name li {
   font-weight: 400;
   font-size: 20px;
@@ -377,7 +381,7 @@ nav ul li a:hover {
   }
 
   .contact-section .text-name {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .contact-section .text-name li,   
@@ -403,6 +407,65 @@ nav ul li a:hover {
   .contact-section .img-text {
     width: 100%;
     margin-bottom: 20px;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 50px;
+  max-width: 600px;
+}
+
+form input {
+  font-size: 18px;
+  color: white;
+  padding: 23px 20px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #000000;
+}
+
+form textarea {
+  font-size: 18px;
+  color: white;
+  padding: 22px 20px;
+  height: 260px;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #000000;
+}
+
+form button {
+  font-size: 18px;
+  padding: 15px 30px;
+  color: white;
+  font-family: 600px;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  background-color: #1DB954;
+  border-radius: 10px;
+}
+
+@media (max-width: 346px) {
+  form input {
+    font-size: 16px;
+    padding: 17px 15px;
+  }
+  
+  form textarea {
+    font-size: 16px;
+    padding: 18px 15px;
+  }
+  
+  form button {
+    font-size: 16px;
+    padding: 10px 25px;
+    width: 100%;
   }
 }
 
@@ -483,65 +546,6 @@ nav ul li a:hover {
   gap: 20px;
   padding: 20px;
   margin-top: 20px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 50px;
-  max-width: 600px;
-}
-
-form input {
-  font-size: 18px;
-  color: white;
-  padding: 23px 20px;
-  background-color: transparent;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #000000;
-}
-
-form textarea {
-  font-size: 18px;
-  color: white;
-  padding: 22px 20px;
-  height: 260px;
-  resize: none;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #000000;
-}
-
-form button {
-  font-size: 18px;
-  padding: 15px 30px;
-  color: white;
-  font-family: 600px;
-  border: none;
-  cursor: pointer;
-  width: fit-content;
-  background-color: #1DB954;
-  border-radius: 10px;
-}
-
-@media (max-width: 346px) {
-  form input {
-    font-size: 16px;
-    padding: 17px 15px;
-  }
-  
-  form textarea {
-    font-size: 16px;
-    padding: 18px 15px;
-  }
-  
-  form button {
-    font-size: 16px;
-    padding: 10px 25px;
-    width: 100%;
-  }
 }
 
 .assignment-list .assignment-item {
