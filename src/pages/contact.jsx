@@ -1,28 +1,23 @@
 import React from "react";
+import img from "../assets/images/image2.png";
 
 const Contact = () => {
   return (
     <section className="contact-section">
-            <div className="img-text">
+      <div className="img-text">
         <img src={img} />
       </div>
 
       <div className="details">
-        <h2>ABOUT ME</h2>
+        <h2>CONTACT ME</h2>
+        <span>Contact Information</span>
         <div className="text-name">
           <li>Name: <strong>Obamoh Modupe Rejoice</strong></li>
-          <li>Matriculation: <strong>F/HD/32/3210049</strong></li>
-          <li>Department: <strong> Computer Science</strong></li>
-          <li>School: <strong>School of Technology, Yaba College of Technology</strong></li>
+          <li>Email: <strong>modupeobamoh@gmail.com</strong></li>
+          <li>Phone: <strong> 09163958534</strong></li>
         </div>
-        <p>I am a driven and creative individual with a strong passion for technology and problem-solving. I possess diverse skills, including</p>
-        <div className="text-prof">
-          <li>UI/UX Designer</li>
-          <li>QA Tester</li>
-          <li>Realtor</li>
-          <li>Frontend Developer</li>
-        </div>
-        <p>I enjoy exploring innovative ideas, collaborating on projects, and continuously improving my expertise in these fields. My ultimate goal is to contribute meaningfully to the tech and real estate industries while inspiring others to achieve their dreams.</p>
+        <span>Social Media</span>
+        <li className="social">LinkedIn: <strong><a href="https://www.linkedin.com/in/rejoice-obamoh-0384b4187/">https://www.linkedin.com/in/rejoice-obamoh-0384b4187/</a></strong></li>
       </div>
     </section>
   );

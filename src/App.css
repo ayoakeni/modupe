@@ -55,7 +55,7 @@ nav ul li {
 }
 
 nav ul li a {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 400px;
   color: #ffff;
   text-decoration: none;
@@ -312,6 +312,95 @@ nav ul li a:hover {
     margin-bottom: 5px;
   }
   .about .img-text {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.contact-section {
+  width: 80%;
+  margin: auto;
+  padding: 120px 20px 40px;
+}
+
+.contact-section  .img-text {
+  width: 40%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.contact-section .img-text  img {
+  width: 100%;
+}
+
+.contact-section .details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+}
+
+.contact-section .details h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-section .details span {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-section .text-name li {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.contact-section .social {
+  font-size: 20px;
+}
+
+.contact-section .social strong a {  
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    width: 100%;
+  }
+  
+  .contact-section .details h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .contact-section .text-name {
+    margin-bottom: 20px;
+  }
+
+  .contact-section .text-name li,   
+  .contact-section .social strong a {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .contact-section .img-text {
+    width: 80%;
+  }
+}
+
+@media (max-width: 408px) {
+  .contact-section .details h2 {
+    margin-bottom: 5px;
+  }
+  .contact-section .img-text {
     width: 100%;
     margin-bottom: 20px;
   }
