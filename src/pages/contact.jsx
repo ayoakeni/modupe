@@ -19,6 +19,12 @@ const Contact = () => {
         <span>Social Media</span>
         <li className="social">LinkedIn: <strong><a href="https://www.linkedin.com/in/rejoice-obamoh-0384b4187/">https://www.linkedin.com/in/rejoice-obamoh-0384b4187/</a></strong></li>
       </div>
+
+      <form action="">
+        <input type="text" name="subject" id="" placeholder="Subject" required />
+        <textarea name="message" id="" placeholder="Write your message" required></textarea>
+        <button className="submit">Send Message</button>
+      </form>
     </section>
   );
 };
