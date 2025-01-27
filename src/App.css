@@ -515,20 +515,26 @@ form button {
 }
 
 .hidden-upload-btn {
+  display: flex;
+  gap: 10px;
   position: absolute;
-  top: 0;
+  left: 40px;
+  bottom: -40px;
+  width: fit-content;
   right: 20px;
   cursor: pointer;
+  color: white;
   background-color: transparent;
-  padding: 2px 3px;
-  border: none;
+  padding: 13px 17px;
+  border: 1px solid #1DB954;
+  border-style: dashed;
   transition: all 0.3s ease;
   border-radius: 5px;
   z-index: 99px;
 }
 
 .hidden-upload-btn:hover {
-  background-color: goldenrod;
+  background-color: #1DB954;
 }
 
 .hidden-upload-btn i {
@@ -552,13 +558,12 @@ form button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: fit-content;
   gap: 10px;
-  padding: 15px;
-  background-color: #fff;
-  border: 1px solid goldenrod;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 .assignment-list .assignment-item:hover {
@@ -567,41 +572,33 @@ form button {
 }
 
 .assignment-list .list-question {
-  color: #333;
-  max-height: 100px;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: fit-content;
+  padding: 10px;
 }
 
 .assignment-list .assignment-item h3 {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 5px;
 }
 
-.assignment-list li, .question li, .assignment-content li {
+.assignment-content li {
   font-size: 18px;
   margin-left: 20px;
 }
 
-.assignment-list .assignment-item .assignment-date {
-  font-size: 14px;
-  color: #888;
+.assignment-list .assignment-item  img {
+  height: 30px;
 }
 
 .assignment-list .assignment-item .view-link {
-  align-self: flex-start;
-  color: #4a90e2;
   text-decoration: none;
-  font-weight: 500;
   transition: color 0.2s ease;
-}
-
-.assignment-list .assignment-item .view-link:hover {
-  color: goldenrod;
 }
 
 .modal-overlay {
@@ -631,7 +628,7 @@ form button {
 }
 
 .modal-content .detail {
-  color: goldenrod;
+  color: #1DB954;
 }
 
 .modal-note {
@@ -644,40 +641,6 @@ form button {
   font-size: 24px;
   font-weight: bold;
   color: #333;
-}
-
-/* .modal-content input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  outline-color: goldenrod;
-  transition: all 0.2s ease;
-}
-
-.modal-content input:focus-within {
-  font-size: 20px;
-} */
-
-.modal-question {
-  margin-bottom: 15px !important;
-}
-
-.modal-question .quill {
-  width: 100% !important;
-  height: auto !important;
-}
-
-.modal-question .quill img {
-  width: 10% !important;
-  margin: auto !important;
-}
-
-.modal-question .quill .ql-container{
-  font-size: 16px !important;
-  height: 51% !important;
 }
 
 .modal-content .react-quill {
@@ -705,7 +668,7 @@ form button {
 }
 
 .modal-content button {
-  background: goldenrod;
+  background: #1DB954;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -716,7 +679,7 @@ form button {
 }
 
 .modal-content button:hover {
-  background: goldenrod;
+  background: #73b189;
 }
 
 .modal-close {
@@ -750,7 +713,7 @@ form button {
   top: -69px;
   left: 0;
   right: 0;
-  color: goldenrod;
+  color: #1DB954;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -786,30 +749,18 @@ form button {
     max-height: 90vh;
   }
 
-  .modal-question .quill .ql-container{
-    height: 40% !important;
-  }
-
   .modal-content .quill .ql-container{
     height: 79%;
   }
 }
 
 @media (max-width: 408px) {
-  .modal-question .quill .ql-container{
-    height: 37% !important;
-  }
-
   .modal-content .quill .ql-container{
     height: 72%;
   }
 }
 
 @media (max-width: 296px) {
-  .modal-question .quill .ql-container{
-    height: 29% !important;
-  }
-
   .modal-content .quill .ql-container{
     height: 64%;
   }
@@ -832,29 +783,9 @@ form button {
   border-radius: 8px;
 }
 
-.details-top {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-size: 20px;
-}
-
-.question {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.answer {
-  font-size: 24px;
-  font-weight: bold;
-  margin: auto;
-  text-decoration: underline;
-}
-
 .assignment-content {
   color: #1E1E1E;
+  font-size: 18px;
 }
 
 .assignment-content p img {

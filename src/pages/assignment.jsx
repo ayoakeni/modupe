@@ -10,6 +10,7 @@ import {
 } from "firebase/firestore";
 import TextEditor from "../components/textEditor";
 import SafeHtml from "../components/safeHtml";
+import img from "../assets/images/Group.png"
 
 const AssignmentUploader = () => {
   const [assignments, setAssignments] = useState([]);
@@ -26,7 +27,7 @@ const AssignmentUploader = () => {
     setErrorMessage("");
     try {
       const q = query(
-        collection(db, "assignments"),
+        collection(db, "modupe"),
         orderBy("timestamp", "asc")
       );
       const querySnapshot = await getDocs(q);
@@ -44,8 +45,8 @@ const AssignmentUploader = () => {
   };
 
   const handleUpload = async () => {
-    if (!title || !content) {
-      alert("Both title and content are required.");
+    if (!content) {
+      alert("Content is required.");
       return;
     }
 
@@ -54,10 +55,8 @@ const AssignmentUploader = () => {
     setErrorMessage("");
 
     try {
-      await addDoc(collection(db, "assignments"), {
-        title,
+      await addDoc(collection(db, "modupe"), {
         content,
-        timestamp: serverTimestamp(),
       });
       setSuccessMessage("Assignment uploaded successfully!");
       setTitle("");
@@ -98,6 +97,7 @@ const AssignmentUploader = () => {
         title="Upload assignment"
       >
         <i className="fa-solid fa-upload"></i>
+        Upload Assignment
       </button>
 
       {/* Modal */}
@@ -108,20 +108,6 @@ const AssignmentUploader = () => {
             <p className="modal-note">
               Note: Maximum image size for uploads is 5MB.
             </p>
-            {/* <input
-              type="text"
-              placeholder="Question"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              className="modal-input"
-            /> */}
-            <div className="modal-question">
-              <TextEditor
-                value={title}
-                onChange={setTitle}
-                placeholder="Question"
-              />
-            </div>
             <TextEditor
               value={content}
               onChange={setContent}
@@ -153,21 +139,16 @@ const AssignmentUploader = () => {
 
       {/* Assignment List */}
       {listLoading ? (
-        <div className="loading-indicator">Loading assignments...</div>
+        <div className="loading-indicator">Please wait...</div>
       ) : (
         <div className="assignment-list">
           {assignments.map((assignment, index) => (
             <div key={assignment.id} className="assignment-item">
-              <div className="list-question">
-                <h3> Assignment {index + 1}:</h3> 
-                <SafeHtml htmlContent={assignment.title} fallback="Question is not available." />
-              </div>
-              <p className="assignment-date">
-                Uploaded:{" "}
-                {new Date(assignment.timestamp?.toDate()).toLocaleString()}
-              </p>
               <a href={`/assignments/${assignment.id}`} className="view-link">
-                View Assignment
+                <div className="list-question">
+                  <img src={img} />
+                  <h3> Assignment {index + 1}</h3> 
+                </div>
               </a>
             </div>
           ))}
