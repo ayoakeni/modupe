@@ -209,6 +209,20 @@ nav ul li a:hover {
   }
 }
 
+@media (max-width: 496px) {
+  .home .texthero {
+    margin-bottom: 20px;
+  }
+
+  .texthero h2, .home .info h2 {
+    font-size: 20px;
+  }
+
+  .texthero p {
+    font-size: 18px;
+  }
+}
+
 @media (max-width: 408px) {
   .home .info .img-text {
     width: 100%;
@@ -823,7 +837,7 @@ form button {
 
 @media (max-width: 562px) {
   .viewBox {
-    padding: 69px 0 0;
+    padding: 100px 0 0;
   }
   .view-assignment {
     width: 100%;
