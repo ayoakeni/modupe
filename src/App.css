@@ -558,7 +558,6 @@ form button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: fit-content;
   gap: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -578,7 +577,6 @@ form button {
   color: white;
   border-radius: 8px;
   border: 1px solid #ccc;
-  width: fit-content;
   padding: 10px;
 }
 
@@ -599,6 +597,13 @@ form button {
 .assignment-list .assignment-item .view-link {
   text-decoration: none;
   transition: color 0.2s ease;
+}
+
+@media (max-width: 340px) {
+  .assignment-list {
+    grid-template-columns: 100%;
+    padding: 20px 0 0;
+  }
 }
 
 .modal-overlay {
