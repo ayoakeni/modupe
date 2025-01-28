@@ -9,13 +9,11 @@ import {
   orderBy,
 } from "firebase/firestore";
 import TextEditor from "../components/textEditor";
-import SafeHtml from "../components/safeHtml";
 import img from "../assets/images/Group.png"
 
 const AssignmentUploader = () => {
   const [assignments, setAssignments] = useState([]);
   const [showModal, setShowModal] = useState(false);
-  const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
   const [listLoading, setListLoading] = useState(true);
@@ -57,9 +55,9 @@ const AssignmentUploader = () => {
     try {
       await addDoc(collection(db, "modupe"), {
         content,
+        timestamp: serverTimestamp(),
       });
       setSuccessMessage("Assignment uploaded successfully!");
-      setTitle("");
       setContent("");
       setShowModal(false);
       fetchAssignments();
